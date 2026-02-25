@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "apps/api/src/main.ts",
+      "src": "apps/api/src/handler.ts",
       "use": "@vercel/node"
     },
     {
@@ -14,11 +14,11 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "apps/api/src/main.ts"
+      "destination": "/apps/api/src/handler.ts"
     },
     {
       "source": "/((?!api).*)",
-      "destination": "/apps/web/$1"
+      "destination": "/index.html"
     }
   ]
 }
