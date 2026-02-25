@@ -6,9 +6,9 @@
       "use": "@vercel/node"
     },
     {
-      "src": "apps/web/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "config": { "distDir": "apps/web/dist" }
     }
   ],
   "rewrites": [
